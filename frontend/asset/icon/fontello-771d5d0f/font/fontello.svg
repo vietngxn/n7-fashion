@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2025 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="user" unicode="&#xe800;" d="M313 793q107 0 183-77t77-183-77-184-183-76-184 76-76 184 76 183 184 77z m-313-782q0 83 86 146t227 63q136 0 224-63t88-146q0-41-89-72t-223-32q-140 0-227 32t-86 72z" horiz-adv-x="625" />
+
+<glyph glyph-name="search-1" unicode="&#xe803;" d="M643 386q0 103-73 176t-177 74-177-74-73-176 73-177 177-73 177 73 73 177z m286-465q0-29-22-50t-50-21q-30 0-50 21l-191 191q-100-69-223-69-80 0-153 31t-125 84-84 125-31 153 31 152 84 126 125 84 153 31 153-31 125-84 84-126 31-152q0-123-69-223l191-191q21-21 21-51z" horiz-adv-x="928.6" />
+
+<glyph glyph-name="shopping-bag" unicode="&#xf290;" d="M981 64l19-174q2-16-9-28-10-12-27-12h-928q-16 0-27 12-11 12-9 28l20 174h961z m-52 469l48-433h-954l48 433q2 13 12 22t24 9h143v-71q0-30 21-51t50-21 51 21 21 51v71h214v-71q0-30 21-51t51-21 50 21 21 51v71h143q14 0 24-9t12-22z m-215 103v-143q0-15-10-25t-25-11-25 11-11 25v143q0 59-42 101t-101 42-101-42-42-101v-143q0-15-10-25t-26-11-25 11-10 25v143q0 88 63 151t151 63 152-63 62-151z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
