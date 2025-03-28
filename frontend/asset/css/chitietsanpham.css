@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(../font/Inter/static/Inter_18pt-Regular.ttf);
+}
+*{
+    font-family: "Inter";
+}
+.color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.color-1 { background-color: whitesmoke; }
+.color-2 { background-color: black; }
+.color-3 { background-color: wheat; }
+.product-thumbnail {
+    width: 100px;
+    height: 100px;
+}
+.product-image {
+    width: 500px;
+}
+.quantity-input {
+    width: 50px;
+    text-align: center;
+}
+.btn-custom {
+    background-color: green;
+    color: white;
+}
+.content-container h1{
+   font-size: 30px;
+   font-weight: bold;
+}
+.color-circle{
+    margin-right: 12px;
+}
+.add-to-cart-btn{
+    width: 100%;
+    height: 40px;
+    background-color: #3E9B38;
+    color: white;
+}
+.desc-title{
+    font-size: 20px;
+}
+.size-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.size-label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.size-input {
+    display: none; 
+}
+
+
+.size-input:checked + .size-label {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+
+.size-label:hover {
+    background-color: #f0f0f0;
+}
+.quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #000; 
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #f0f0f0; 
+}
+
+.quantity-input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #000; 
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+.quantity-btn:active {
+    background-color: #000; 
+    color: #fff;
+    border-color: #000;
+}

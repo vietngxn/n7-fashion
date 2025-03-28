@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../asset/css/landingpage.css" />
+  <link rel="stylesheet" href="../asset/css/boostrap/bootstrap.min.css">
+  <script src="../asset/js/boostrap/bootstrap.bundle.js"></script>
+  <script src="../asset/css/boostrap/jquery-3.7.1.min.js"></script>
+  <title>N7 FASHION | MongoDB Project</title>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const openRegisterBtn = document.getElementById("openRegisterModal");
+    const registerTab = new bootstrap.Tab(document.getElementById("register-tab"));
+
+    openRegisterBtn.addEventListener("click", function () {
+      registerTab.show(); // Chuyển tab sang Đăng Ký - Set khi ấn vào button đăng ký thì hiện luônluôn tab đăng ký 
+    });
+  });
+</script>
+
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <img src="../asset/image/logo-team.png" alt="">
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#catalogue">DANH MỤC</a></li>
+      <li><a href="#fashion">ƯU ĐÃI</a></li>
+      <li><a href="#favourite">XU HƯỚNG</a></li>
+      <li><a href="#lifestyle">LỐI SỐNG</a></li>
+      <li>
+        <button class="btn" id="openRegisterModal" data-bs-toggle="modal" data-bs-target="#idmodal">ĐĂNG KÍ</button>
+        <!-- id="open-modal" -->
+      </li>
+    </ul>
+
+  </nav>
+  <div class="modal fade" id="idmodal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Đăng Ký - Đăng Nhập</h3>
+          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs" id="authTabs">
+            <li class="nav-item">
+              <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login">Đăng Nhập</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register">Đăng Ký</a>
+            </li>
+          </ul>
+
+          <div class="tab-content mt-3">
+            <!-- Tab Đăng Nhập -->
+            <div class="tab-pane fade show active" id="login">
+              <form action="" class="">
+                <div class="mb-3">
+                  <label for="login-username" class="form-label">User Name</label>
+                  <input type="text" class="form-control" id="login-username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="login-password" class="form-label">Mật khẩu</label>
+                  <input type="password" class="form-control" id="login-password" required>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="showPassword">
+                  <label class="form-check-label" for="showPassword">Hiện mật khẩu</label>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <a href="#" class="text-primary">Quên mật khẩu?</a>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                </div>
+                <div class="text-center mt-3">
+                  <p>Hoặc đăng nhập với</p>
+                  <button class="btn btn-outline-primary">Facebook</button>
+                  <button class="btn btn-outline-danger">Google</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Tab Đăng Ký -->
+            <div class="tab-pane fade" id="register">
+              <form action="" class="">
+                <div class="mb-3">
+                  <label for="login-username" class="form-label">User Name</label>
+                  <input type="text" class="form-control" id="login-username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="register-name" class="form-label">Họ Tên</label>
+                  <input type="text" class="form-control" id="register-name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="register-email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="register-email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="register-password" class="form-label">Mật khẩu</label>
+                  <input type="password" class="form-control" id="register-password" required>
+                </div>
+                <div class="mb-3">
+                  <label for="confirm-password" class="form-label">Nhập lại mật khẩu</label>
+                  <input type="password" class="form-control" id="confirm-password" required>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                  <label class="form-check-label" for="agreeTerms">Tôi đồng ý với các điều khoản của trang web</label>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-success">Đăng Ký</button>
+                </div>
+                <div class="text-center mt-3">
+                  <p>Hoặc đăng ký với</p>
+                  <button class="btn btn-outline-primary">Facebook</button>
+                  <button class="btn btn-outline-danger">Google</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <header>
+    <div class="section__container header__container">
+      <div class="header__content">
+        <h1>
+          <span>PHONG CÁCH</span>
+          <br />
+          RIÊNG
+          <br />
+          <span>ĐẬM</span>
+          <br />
+          CHẤT BẠN.
+        </h1>
+        <p>Khám phá phong cách độc đáo, <br /> tạo dấu ấn cá nhân qua mỗi bộ trang phục.</p>
+        <div class="header__btns">
+          <button class="btn">Mua Ngay</button>
+        </div>
+      </div>
+      <div class="header__image">
+        <img src="../asset/image/header.png" alt="header" />
+      </div>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="banner__container">
+      <img src="../asset/image/logo/banner-1.png" alt="banner" />
+      <img src="../asset/image/logo/banner-2.png" alt="banner" />
+      <img src="../asset/image/logo/banner-3.png" alt="banner" />
+      <img src="../asset/image/logo/banner-4.png" alt="banner" />
+      <img src="../asset/image/logo/banner-5.png" alt="banner" />
+      <img src="../asset/image/logo/banner-6.png" alt="banner" />
+      <img src="../asset/image/logo/banner-7.png" alt="banner" />
+      <img class="chillnfree" src="../asset/image/logo/banner-8.png" alt="banner" />
+    </div>
+  </section>
+
+  <section class="section__container arrival__container" id="catalogue">
+    <h2 class="section__header">DANH MỤC SẢN PHẨM</h2>
+    <div class="arrival__grid">
+      <div class="arrival__card">
+        <div class="arrival__image">
+          <img src="../asset/image/arrival-1.jpg" alt="arrival" />
+        </div>
+        <div class="arrival__content">
+          <div>
+            <h4>Hoodies & Sweater</h4>
+            <a href="#">Khám phá ngay</a>
+          </div>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+      <div class="arrival__card">
+        <div class="arrival__image">
+          <img src="../asset/image/arrival-2.jpg" alt="arrival" />
+        </div>
+        <div class="arrival__content">
+          <div>
+            <h4>Áo khoác</h4>
+            <a href="#">Khám phá ngay</a>
+          </div>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+      <div class="arrival__card">
+        <div class="arrival__image">
+          <img src="../asset/image/arrival-3.jpg" alt="arrival" />
+        </div>
+        <div class="arrival__content">
+          <div>
+            <h4>Áo phông</h4>
+            <a href="#">Khám phá ngay</a>
+          </div>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sale" id="fashion">
+    <div class="section__container sale__container">
+      <div class="sale__image">
+        <img src="../asset/image/sale.png" alt="sale" />
+      </div>
+      <div class="sale__content">
+        <h2><span>BLACK</span><br />FRIDAY</h2>
+        <p>
+          Giảm 30% và nhận ngay 10 điểm đối với toàn bộ khách hàng nhập mã voucher <span
+            style="color: white;">"TranTheTrungDepTrai"</span>
+        </p>
+        <h4>1 Tháng 4 - 30 Tháng 4 2025</h4>
+        <p>*</p>
+        <div class="sale__btn">
+          <button class="btn">MUA NGAY</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container favourite__container" id="favourite">
+    <h2 class="section__header">XU HƯỚNG THỜI TRANG</h2>
+    <div class="favourite__grid">
+      <div class="favourite__card">
+        <div class="favourite__image">
+          <img src="../asset/image/favourite-1.jpg" alt="favourite" />
+        </div>
+        <div class="favourite__content">
+          <div>
+            <h4>Xu hướng trên mạng xã hội</h4>
+            <a href="#">Khám phá ngay</a>
+          </div>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+      <div class="favourite__card">
+        <div class="favourite__image">
+          <img src="../asset/image/favourite-2.jpg" alt="favourite" />
+        </div>
+        <div class="favourite__content">
+          <div>
+            <h4>Thời trang giá rẻ</h4>
+            <a href="#">Khám phá ngay</a>
+          </div>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="promo">
+    <div class="section__container promo__container">
+      <h2 class="section__header">
+        THAM GIA CỘNG ĐỒNG N7 FASHION
+      </h2>
+      <p>Điền đầy đủ email để nhận thông báo và ưu đãi mới nhất nhé!</p>
+      <form action="/">
+        <input type="text" placeholder="Nhập email" />
+        <button class="btn">GỬI</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <div class="footer__logo">
+          <a href="#">N7 FASHION</a>
+        </div>
+        <p>Trang web phục vụ cho đề tài của môn học CSDL NoSQL MongoDB - Trường Đại học Công nghiệp TPHCM</p>
+        <ul class="footer__socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Mã số sinh viên</h4>
+        <ul class="footer__links">
+          <li><a href="#">23687551</a></li>
+          <li><a href="#">23687551</a></li>
+          <li><a href="#">23687551</a></li>
+          <li><a href="#">23687551</a></li>
+          <li><a href="#">23687551</a></li>
+          <li><a href="#">23687551</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Họ và tên</h4>
+        <ul class="footer__links">
+          <li><a href="#">Nguyễn Bá Việt</a></li>
+          <li><a href="#">Nguyễn Bá Việt</a></li>
+          <li><a href="#">Nguyễn Bá Việt</a></li>
+          <li><a href="#">Nguyễn Bá Việt</a></li>
+          <li><a href="#">Nguyễn Bá Việt</a></li>
+          <li><a href="#">Nguyễn Bá Việt</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Chức năng</h4>
+        <ul class="footer__links">
+          <li><a href="#">Leader</a></li>
+          <li><a href="#">FE Dev</a></li>
+          <li><a href="#">BE Dev</a></li>
+          <li><a href="#">BE Dev</a></li>
+          <li><a href="#">BE Dev</a></li>
+          <li><a href="#">BE Dev</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2025. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="../asset/js/landingpage.js"></script>
+</body>
+
+</html>

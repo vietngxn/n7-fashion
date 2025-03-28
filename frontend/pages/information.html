@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="stylesheet" href="../asset/css/boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/css/information.css">
+    <script src="../asset/js/boostrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../asset/icon/fontello-771d5d0f/css/fontello.css">
+    <link rel="stylesheet" href="../asset/icon/fontello-35528ea5/css/fontello.css">
+
+</head>
+<body>
+    <div class="containers">
+        <!-- Form -->
+    <div class="form-container">
+        <form action="">
+            <h4>Thông tin cá nhân</h4>
+
+            <table>
+                <tr>
+                    <td class="lab"><label for="">User Name</label></td>
+                    <td class="inp">
+                        <input type="text" placeholder="Username">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lab"><label for="">Email</label></td>
+                    <td class="inp">
+                        <input type="text" placeholder="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lab"><label for="">Họ</label></td>
+                    <td class="inp">
+                        <input type="text" placeholder="Nguyen">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lab"><label for="">Tên</label></td>
+                    <td class="inp">
+                        <input type="text" placeholder="Viet">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lab"><label for="">Ngày sinh</label></td>
+                    <td class="inp">
+                        <input type="text" placeholder="DD/MM/YY">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lab"><label for="">Địa chỉ</label></td>
+                    <td class="inp">
+                        <input type="text" placeholder="ABCXYZ">
+                    </td>
+                </tr>
+                <tr style="text-align: end;" class="w-100">
+                    <td colspan="2" class="w-50">
+                        <input class="btn w-50" type="button" value="Lưu"></input>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+
+    </div>
+            
+        <!-- Footer -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            document.body.appendChild(overlay);
+            
+            menuToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+                overlay.style.display = mobileNav.classList.contains('active') ? 'block' : 'none';
+            });
+            
+            overlay.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                overlay.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

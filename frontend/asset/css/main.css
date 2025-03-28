@@ -1,0 +1,492 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Phần header */
+header{
+    height: 100px;
+}
+
+header .left, .center, .right{
+    display: inline-block;
+    height: 100%;
+}
+
+header .left, .right{
+    width: 20%;
+}
+
+header .center{
+    width: 58%;
+    text-align: center;
+}
+
+header .right{
+    text-align: right;
+}
+
+header .right button{
+    border: 0;
+    border-radius: 50%;
+    width: 15%;
+    height: 35%;
+    margin: 5px;
+}
+
+header img{
+    width: 40%;
+}
+
+header input{
+    width: 90%;
+    height: 40px;
+    border: 0;
+    padding: 5px;
+}
+
+/* Ẩn menu toggle trên desktop */
+.menu-toggle {
+    display: inline-block;
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1001;
+}
+
+/* Menu mobile */
+.mobile-nav {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: -250px; /* Ẩn menu sang trái */
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 60px 0 0; /* Tạo khoảng trống cho header */
+}
+
+.mobile-nav li {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Khi menu active */
+.mobile-nav.active {
+    left: 0;
+}
+
+/* Menu desktop */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.desktop-nav ul{
+    text-align: center;
+}
+
+.desktop-nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.desktop-nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+.desktop-nav ul li a:hover{
+    color: #409F3A;
+}
+
+/* Phần silde */
+.slide{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slide img{
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+    position: relative;
+}
+
+/* Phần bộ lọc sản phẩm */
+section .filter .infomation {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+section .filter {
+    text-align: center;
+}
+
+section .filter .infomation h4,h6 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+section .filter .infomation .gender,
+section .filter .infomation .color, 
+section .filter .infomation .size, 
+section .filter .infomation .price {
+    width: 20%;
+}
+
+section .filter .infomation p {
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: bold;
+    text-align: center;
+}
+
+section .filter .infomation select {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+section .filter .infomation .price select{
+    width: 100%;
+}
+
+section .filter .infomation .gender label {
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+    padding-left: 20%;
+    white-space: nowrap;
+}
+
+section .filter .infomation .gender label input {
+    margin-right: 20px;
+}
+
+section .filter .search{
+    padding: 3px 30px;
+    background-color: #409F3A;
+    border: 0px ;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* Phần sản phẩm */
+.product {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.product h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.product .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product .product-card {
+    border: 0;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #f7f7f7;
+}
+
+.product .product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product .product-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product .product-card .price {
+    font-size: 16px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.product .color-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product .color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: inline-block;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product .color-dot:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border: 1px solid #000;
+}
+
+.product .color-dot.active {
+    border: 2px solid #333;
+    transform: scale(1.1);
+    
+}
+
+/* Phần footer */
+footer{
+    height: 300px;
+    background-color: #000;
+    color: #bdb9b9;
+    padding: 30px;
+}
+
+footer .tbhead{
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+footer .tbhead .col1{
+    color: #409F3A;
+    font-size: 30px;
+}
+
+footer table tr .col1{
+    width: 40%;
+    padding: 0px 150px 0 170px;
+}
+
+footer table tr .col1 h4{
+    padding: 10px 0;
+    padding-top: 0;
+    color: #409F3A;
+    font-weight: bold;
+}
+
+footer table tr .col1 p{
+    margin: 30px 0;
+}
+
+footer table tr .col1 i{
+    background-color: #409F3A;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #000;
+}
+
+footer table tr .mssv{
+    width: 20%;
+} 
+
+@media (max-width: 1200px) {
+    .product .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* Giảm từ 4 còn 3 sản phẩm/1 hàng */
+    }
+    
+    header .left, .right {
+        width: 25%; /* Điều chỉnh lại kích thước các phần header */
+    }
+    
+    header .center {
+        width: 48%; /* Thu nhỏ ô tìm kiếm */
+    }
+    
+    /* Bộ lọc hiển thị 2 cột thay vì 4 */
+    section .filter .infomation .gender,
+    section .filter .infomation .color, 
+    section .filter .infomation .size, 
+    section .filter .infomation .price {
+        width: 45%; /* Mỗi cột chiếm 45% */
+        margin-bottom: 15px; /* Thêm khoảng cách giữa các hàng */
+    }
+
+    footer table tr .col1{
+        width: 20%;
+        padding: 0px 150px 0 130px;
+    }
+}
+
+@media (max-width: 768px) {
+     /* Header layout */
+     header {
+        height: 80px; /* Cố định chiều cao header */
+        padding: 10px 0;
+        position: relative;
+    }
+
+    /* Khối right - chứa các nút */
+    header .right {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        display: flex; /* Sử dụng flexbox */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        padding-right: 0;
+        gap: 10px;
+        width: auto; /* Chiều rộng tự động */
+    }
+
+    /* Các nút bên trong .right */
+    header .right button,
+    header .right .menu-toggle {
+        display: inline-flex; /* Hiển thị inline và căn giữa nội dung */
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+        background: #f5f5f5;
+    }
+
+    /* Nút menu toggle */
+    .menu-toggle {
+        display: inline-flex;
+        font-size: 20px;
+        position: static; /* Bỏ position absolute */
+        margin-left: 0;
+    }
+
+    /* Logo */
+    header .left {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+    }
+
+    header .left img {
+        height: 70px;
+        width: auto;
+    }
+
+    /* Thanh tìm kiếm */
+    header .center {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    /* Ẩn menu desktop */
+    nav.desktop-nav {
+        display: none;
+    }
+    
+    /* Hiển thị menu mobile */
+    .mobile-nav {
+        display: block;
+    }
+
+    .mobile-nav li a:hover{
+        background-color: rgb(241, 238, 238);
+        color: #409F3A;
+    }
+
+    /* Menu điều hướng */
+    nav ul li {
+        padding: 0 10px;
+    }
+    
+    /* Giảm kích thước ảnh slide */
+    .slide img {
+        height: 300px;
+        margin-top: 30px;
+    }
+    
+    /* Giảm còn 2 sản phẩm/hàng */
+    .product .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Bộ lọc chiếm 90% chiều rộng */
+    section .filter .infomation {
+        width: 90%;
+    }
+    
+    /* Các mục lọc hiển thị dọc */
+    section .filter .infomation .gender,
+    section .filter .infomation .color, 
+    section .filter .infomation .size, 
+    section .filter .infomation .price {
+        width: 100%;
+    }
+    
+    /* Nút radio giới tính hiển thị ngang */
+    section .filter .infomation .gender label {
+        display: inline-block;
+        padding-left: 0;
+        margin-right: 15px;
+    }
+    
+    /* Mở rộng vùng hiển thị sản phẩm */
+    .product {
+        width: 90%;
+    }
+}
+

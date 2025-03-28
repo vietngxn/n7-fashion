@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San pham</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/css/chitietsanpham.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 text-center">
+                <img src="../asset/image/product-2.png" id="mainImg" alt="Main product image" class="product-image">
+                <div class="mt-3">
+                    <img src="../asset/image/product 3.png" onclick="changeImg('../asset/image/product 3.png')" alt="Product thumbnail 1" class="product-thumbnail">
+                    <img src="../asset/image/product-2.png" onclick="changeImg('../asset/image/product-2.png')" alt="Product thumbnail 2" class="product-thumbnail">
+                    <img src="../asset/image/product-4.png" onclick="changeImg('../asset/image/product-4.png')" alt="Product thumbnail 3" class="product-thumbnail">
+                </div>
+            </div>
+            <div class="col-lg-6 content-container">
+                <h1>Áo polo nam POHTK404</h1>
+                <p class="text-danger font-weight-bold" style="font-size: 24px;">379.000 đ</p>
+                <div class="mt-4">
+                    <p class="font-weight-bold">Màu Sắc</p>
+                    <div>
+                        <span class="color-circle color-1" onclick="changeImg('../asset/image/product 3.png')"></span>
+                        <span class="color-circle color-2" onclick="changeImg('../asset/image/product-2.png')"></span>
+                        <span class="color-circle color-3" onclick="changeImg('../asset/image/product-4.png')"></span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="font-weight-bold">Cỡ</p>
+                    <div class="size-container">
+                        <input type="radio" id="size-m" name="size" class="size-input" value="M">
+                        <label for="size-m" class="size-label">M</label>
+                
+                        <input type="radio" id="size-l" name="size" class="size-input" value="L">
+                        <label for="size-l" class="size-label">L</label>
+                
+                        <input type="radio" id="size-xl" name="size" class="size-input" value="XL">
+                        <label for="size-xl" class="size-label">XL</label>
+                    </div>
+                </div>
+                <div class="mt-4 d-flex align-items-center">
+                    <p class="font-weight-bold" style="margin-right: 130px;">Số lượng</p>
+                    <div class="quantity-container">
+                        <button class="quantity-btn minus" onclick="decreaseQuantity()">-</button>
+                        <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                        <button class="quantity-btn plus" onclick="increaseQuantity()">+</button>
+                    </div>
+                </div>
+                <button class="add-to-cart-btn btn mt-4"><i class="fas fa-shopping-cart mr-2"></i>THÊM VÀO GIỎ HÀNG</button>
+                <div class="mt-4">
+                    <h2 class="font-weight-bold desc-title">Mô tả</h2>
+                    <ul>
+                        <li>Chất liệu: PIQUE</li>
+                        <li>Độ co giãn: 70% COTTON, 27% POLY, 3% SPANDEX</li>
+                        <li>Form: REGULAR</li>
+                        <li>Màu: TRẮNG, ĐEN, BE</li>
+                        <li>Size: M - L - XL</li>
+                        <li>Sản phẩm đã có mặt tại toàn bộ các cửa hàng trên hệ thống</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h2 class="font-weight-bold desc-title">HƯỚNG DẪN CHỌN SIZE</h2>
+                    <ul>
+                        <li>Chất liệu: PIQUE</li>
+                        <li>Độ co giãn: 70% COTTON, 27% POLY, 3% SPANDEX</li>
+                        <li>Form: REGULAR</li>
+                        <li>Màu: TRẮNG, ĐEN, BE</li>
+                        <li>Size: M - L - XL</li>
+                        <li>Sản phẩm đã có mặt tại toàn bộ các cửa hàng trên hệ thống</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+        function changeImg(imageSrc){
+            document.getElementById('mainImg').src=imageSrc
+        }
+
+    </script>
+    <script>
+        // Lấy phần tử input
+        const quantityInput = document.getElementById('quantity');
+        function increaseQuantity() {
+            let quantity = parseInt(quantityInput.value);
+            quantityInput.value = quantity + 1;
+        }
+        function decreaseQuantity() {
+            let quantity = parseInt(quantityInput.value);
+            if (quantity > 1) { 
+                quantityInput.value = quantity - 1;
+            }
+        }
+    </script>
+</body>
+</html>
