@@ -46,19 +46,6 @@ router.get("/leaderBoard", async (req, res) => {
           customerUserName: "$customerInfo.customerUserName",
           email: "$customerInfo.email",
           totalSpent: 1,
-          mostExpensiveProduct: {
-            $reduce: {
-              input: "$items",
-              initialValue: { price: 0 },
-              in: {
-                $cond: {
-                  if: { $gt: ["$$this.price", "$$value.price"] },
-                  then: "$$this",
-                  else: "$$value",
-                },
-              },
-            },
-          },
         },
       },
       {
