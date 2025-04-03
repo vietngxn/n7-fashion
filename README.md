@@ -22,7 +22,7 @@ Website bán quần áo được xây dựng bởi nhóm 7 để phục vụ cho
   <br>
   +Cách thức:
   <br>
-    * Bước 1: Clone Repository, cd Folder
+    * Bước 1: Clone Repository, cd Folder backend
     <br>
     * Bước 2: Cài đặt package: npm install
         <br>
