@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const path = require('path');
 // import router
 const ProductRouter = require("./api_router/products.router");
 const CustomerRouter = require("./api_router/customer.router");
@@ -30,12 +29,8 @@ app.use("/", ProductRouter);
 app.use("/", CustomerRouter);
 app.use("/", CartRouter);
 
-app.use('../frontend/pages', express.static(path.join(__dirname, 'frontend', 'pages')));
 
-// Route gốc (tùy chọn)
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'pages', 'index.html'));
-});
+
 // listen the server to run on port 3000
 app.listen(3000, () => {
   console.log("Server is running at port 3000");
