@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://n7-fashion-1.onrender.com';
 
         document.addEventListener('DOMContentLoaded', function() {
             fetchLeaderboard();
