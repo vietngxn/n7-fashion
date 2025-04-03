@@ -21,5 +21,11 @@ Website bán quần áo được xây dựng bởi nhóm 7 để phục vụ cho
   +Yêu cầu: Cài đặt nodejs version mới nhất 
   <br>
   +Cách thức:
-    * Bước 1: Clone Repository:
+  <br>
+    * Bước 1: Clone Repository, cd Folder
+    <br>
+    * Bước 2: Cài đặt package: npm install
+        <br>
+    * Bước 3: Chạy ở môi trường product: npm start
+    
       
