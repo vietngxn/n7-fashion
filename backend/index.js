@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require('path');
 // import router
 const ProductRouter = require("./api_router/products.router");
 const CustomerRouter = require("./api_router/customer.router");
