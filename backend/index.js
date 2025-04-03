@@ -30,7 +30,7 @@ app.use("/", ProductRouter);
 app.use("/", CustomerRouter);
 app.use("/", CartRouter);
 
-app.use('/frontend/pages', express.static(path.join(__dirname, 'frontend', 'pages')));
+app.use('./frontend/pages', express.static(path.join(__dirname, 'frontend', 'pages')));
 
 // Route gốc (tùy chọn)
 app.get('/', (req, res) => {
