@@ -19,6 +19,7 @@ Website bán quần áo được xây dựng bởi nhóm 7 để phục vụ cho
 
 # Cách thức khởi chạy ứng dụng
   +Yêu cầu: Cài đặt nodejs version mới nhất 
+  <br>
   +Cách thức:
     * Bước 1: Clone Repository:
       
