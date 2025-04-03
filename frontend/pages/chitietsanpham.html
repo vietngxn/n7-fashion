@@ -1,47 +1,75 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San pham</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title id="tieuDe">Chi tiết sản phẩm</title>
+    <link rel="icon" type="image/x-icon" href="../asset/image/logo-team.png">
+    <link rel="stylesheet" href="../asset/css/main.css">
+    <link rel="stylesheet" href="../asset/css/boostrap/bootstrap.min.css">
+    <script src="../asset/js/boostrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../asset/icon/fontello-771d5d0f/css/fontello.css">
+    <link rel="stylesheet" href="../asset/icon/fontello-35528ea5/css/fontello.css">
     <link rel="stylesheet" href="../asset/css/chitietsanpham.css">
+    <script src="../asset/js/header.js"></script>
+    <link rel="stylesheet" href="../asset/css/footer.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
+    <div class="container">
+        <header>
+           <div class="left">
+               <a href="./main.html"><img src="../asset/image/logo-team.png" alt=""></a>
+               
+           </div>
+           <nav class="desktop-nav">
+               <ul>
+                   <li><a href="./index.html">Giới thiệu</a></li>
+                   <li><a href="./main.html">Sản phẩm</a></li>
+                   <li><a href="./leaderboard.html">Bảng xếp hạng</a></li>
+                   <li><a href="./index.html">Tin tức</a></li>
+                   <li><a href="./index.html">Tuyển dụng</a></li>
+               </ul>
+           </nav>
+           <div class="right">
+               <button style="background-color: #000;"><a id="info-btn" href="./information.html"><i class="icon-user" style="color:#fff; size: 15px;"></i></a></button>
+               <button><a href="./giohang.html"><i class="icon-shopping-bag" style="color: #000;"></i></a></button>
+               <div class="menu-toggle">☰</div>
+           </div>
+       </header>
+       <nav class="mobile-nav">
+           <ul>
+               <li><a href="#">Giới thiệu</a></li>
+               <li><a href="./main.html">Sản phẩm</a></li>
+               <li><a href="#">Bảng xếp hạng</a></li>
+               <li><a href="#">Tin tức</a></li>
+               <li><a href="#">Tuyển dụng</a></li>
+               <li><a href="#">Hệ thống cửa hàng</a></li>
+           </ul>
+       </nav>
+   </div>
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-6 text-center">
                 <img src="../asset/image/product-2.png" id="mainImg" alt="Main product image" class="product-image">
-                <div class="mt-3">
-                    <img src="../asset/image/product 3.png" onclick="changeImg('../asset/image/product 3.png')" alt="Product thumbnail 1" class="product-thumbnail">
-                    <img src="../asset/image/product-2.png" onclick="changeImg('../asset/image/product-2.png')" alt="Product thumbnail 2" class="product-thumbnail">
-                    <img src="../asset/image/product-4.png" onclick="changeImg('../asset/image/product-4.png')" alt="Product thumbnail 3" class="product-thumbnail">
-                </div>
             </div>
             <div class="col-lg-6 content-container">
-                <h1>Áo polo nam POHTK404</h1>
-                <p class="text-danger font-weight-bold" style="font-size: 24px;">379.000 đ</p>
+                <h1 id="productName">Áo polo nam POHTK404</h1>
+                <p class="text-danger font-weight-bold" style="font-size: 24px;" id="productPrice">379.000 đ</p>
                 <div class="mt-4">
                     <p class="font-weight-bold">Màu Sắc</p>
-                    <div>
-                        <span class="color-circle color-1" onclick="changeImg('../asset/image/product 3.png')"></span>
-                        <span class="color-circle color-2" onclick="changeImg('../asset/image/product-2.png')"></span>
-                        <span class="color-circle color-3" onclick="changeImg('../asset/image/product-4.png')"></span>
+                    <div id="colorOptions" class="color-container">
                     </div>
                 </div>
                 <div class="mt-4">
                     <p class="font-weight-bold">Cỡ</p>
-                    <div class="size-container">
-                        <input type="radio" id="size-m" name="size" class="size-input" value="M">
-                        <label for="size-m" class="size-label">M</label>
-                
-                        <input type="radio" id="size-l" name="size" class="size-input" value="L">
-                        <label for="size-l" class="size-label">L</label>
-                
-                        <input type="radio" id="size-xl" name="size" class="size-input" value="XL">
-                        <label for="size-xl" class="size-label">XL</label>
+                    <div class="size-container" id="sizeOptions">
                     </div>
                 </div>
-                <div class="mt-4 d-flex align-items-center">
+                <div class="mt-4 align-items-center">
                     <p class="font-weight-bold" style="margin-right: 130px;">Số lượng</p>
                     <div class="quantity-container">
                         <button class="quantity-btn minus" onclick="decreaseQuantity()">-</button>
@@ -49,55 +77,89 @@
                         <button class="quantity-btn plus" onclick="increaseQuantity()">+</button>
                     </div>
                 </div>
-                <button class="add-to-cart-btn btn mt-4"><i class="fas fa-shopping-cart mr-2"></i>THÊM VÀO GIỎ HÀNG</button>
+                <button class="add-to-cart-btn btn mt-4" onclick="addToCart()"><i class="fas fa-shopping-cart mr-2"></i>THÊM VÀO GIỎ HÀNG</button>
                 <div class="mt-4">
                     <h2 class="font-weight-bold desc-title">Mô tả</h2>
-                    <ul>
-                        <li>Chất liệu: PIQUE</li>
-                        <li>Độ co giãn: 70% COTTON, 27% POLY, 3% SPANDEX</li>
-                        <li>Form: REGULAR</li>
-                        <li>Màu: TRẮNG, ĐEN, BE</li>
-                        <li>Size: M - L - XL</li>
-                        <li>Sản phẩm đã có mặt tại toàn bộ các cửa hàng trên hệ thống</li>
+                    <ul id="description">
                     </ul>
                 </div>
                 <div class="mt-4">
                     <h2 class="font-weight-bold desc-title">HƯỚNG DẪN CHỌN SIZE</h2>
-                    <ul>
-                        <li>Chất liệu: PIQUE</li>
-                        <li>Độ co giãn: 70% COTTON, 27% POLY, 3% SPANDEX</li>
-                        <li>Form: REGULAR</li>
-                        <li>Màu: TRẮNG, ĐEN, BE</li>
-                        <li>Size: M - L - XL</li>
-                        <li>Sản phẩm đã có mặt tại toàn bộ các cửa hàng trên hệ thống</li>
+                    <ul id="sizeGuide">
+                        <li>Size S: Cân nặng: 45-55 (kg)	Chiều cao: 150-160 (cm)</li>
+                        <li>Size M: Cân nặng: 55-65 (kg)	Chiều cao: 160-170 (cm)</li>
+                        <li>Size L: Cân nặng: 65-75 (kg)	Chiều cao: 170-175 (cm)</li>
+                        <li>Size XL: Cân nặng: 75-85 (kg)	Chiều cao: 175-180 (cm)</li>
+                        
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="section__container footer__container">
+          <div class="footer__col">
+            <div class="footer__logo">
+              <a href="#">N7 FASHION</a>
+            </div>
+            <p>Trang web phục vụ cho đề tài của môn học CSDL NoSQL MongoDB - Trường Đại học Công nghiệp TPHCM</p>
+            <ul class="footer__socials">
+              <li>
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Mã số sinh viên</h4>
+            <ul class="footer__links">
+              <li><a href="#">23687551</a></li>
+              <li><a href="#">23722181</a></li>
+              <li><a href="#">23666911</a></li>
+              <li><a href="#">22637261</a></li>
+              <li><a href="#">23696821</a></li>
+              <li><a href="#">23717161</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Họ và tên</h4>
+            <ul class="footer__links">
+              <li><a href="#">Nguyễn Bá Việt</a></li>
+              <li><a href="#">Trần Thanh Toàn</a></li>
+              <li><a href="#">Cao Quốc Trung</a></li>
+              <li><a href="#">Trần Phương Trí</a></li>
+              <li><a href="#">Ừng Thị Thanh Trúc</a></li>
+              <li><a href="#">Đỗ Minh Tuấn</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Chức năng</h4>
+            <ul class="footer__links">
+              <li><a href="#">Leader</a></li>
+              <li><a href="#">BE Dev</a></li>
+              <li><a href="#">BE Dev</a></li>
+              <li><a href="#">Giao diện + Collection</a></li>
+              <li><a href="#">Giao diện + Collection</a></li>
+              <li><a href="#">Giao diện + Collection</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bar">
+          Copyright © 2025. All rights reserved.
+        </div>
+      </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <script>
-        function changeImg(imageSrc){
-            document.getElementById('mainImg').src=imageSrc
-        }
-
-    </script>
-    <script>
-        // Lấy phần tử input
-        const quantityInput = document.getElementById('quantity');
-        function increaseQuantity() {
-            let quantity = parseInt(quantityInput.value);
-            quantityInput.value = quantity + 1;
-        }
-        function decreaseQuantity() {
-            let quantity = parseInt(quantityInput.value);
-            if (quantity > 1) { 
-                quantityInput.value = quantity - 1;
-            }
-        }
-    </script>
+    <script src="../asset/js/chiTietSp.js"></script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Xếp Hạng Khách Hàng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../asset/css/main.css">
+    <link rel="stylesheet" href="../asset/css/boostrap/bootstrap.min.css">
+    <script src="../asset/js/boostrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../asset/icon/fontello-771d5d0f/css/fontello.css">
+    <link rel="stylesheet" href="../asset/icon/fontello-35528ea5/css/fontello.css">
+    <link rel="stylesheet" href="../asset/css/leaderboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+           <div class="left">
+               <a href="./main.html"><img src="../asset/image/logo-team.png" alt=""></a>
+               
+           </div>
+           <nav class="desktop-nav">
+               <ul>
+                   <li><a href="./index.html">Giới thiệu</a></li>
+                   <li><a href="./main.html">Sản phẩm</a></li>
+                   <li><a href="./leaderboard.html">Bảng xếp hạng</a></li>
+                   <li><a href="./index.html">Tin tức</a></li>
+                   <li><a href="./index.html">Tuyển dụng</a></li>
+               </ul>
+           </nav>
+           <div class="right">
+               <button style="background-color: #000;"><a id="info-btn" href="./information.html"><i class="icon-user" style="color:#fff; size: 15px;"></i></a></button>
+               <button><a href="./giohang.html"><i class="icon-shopping-bag" style="color: #000;"></i></a></button>
+               <div class="menu-toggle">☰</div>
+           </div>
+       </header>
+       <nav class="mobile-nav">
+           <ul>
+               <li><a href="#">Giới thiệu</a></li>
+               <li><a href="./main.html">Sản phẩm</a></li>
+               <li><a href="#">Bảng xếp hạng</a></li>
+               <li><a href="#">Tin tức</a></li>
+               <li><a href="#">Tuyển dụng</a></li>
+               <li><a href="#">Hệ thống cửa hàng</a></li>
+           </ul>
+       </nav>
+   </div>
+    <div class="fireworks-container" id="fireworks">
+        <div class="firework-text" id="top1-name"></div>
+    </div>
+    <div class="containerss">
+        <div class="leaderboard-header">
+            <h1>Bảng Xếp Hạng</h1>
+            <p>Top khách hàng chi tiêu nhiều nhất</p>
+        </div>
+        <div class="leaderboard-table" id="leaderboard-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Xếp hạng</th>
+                        <th>Tên người dùng</th>
+                        <th>Email</th>
+                        <th>Tổng chi tiêu</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                </tbody>
+            </table>
+        </div>
+        <div id="loading" class="loading">Đang tải dữ liệu...</div>
+        <div id="error" class="error" style="display: none;"></div>
+    </div>
+
+    <script src="../asset/js/leaderboard.js"></script>
+    <script src="../asset/js/firework.js"></script>
+</body>
+</html>
