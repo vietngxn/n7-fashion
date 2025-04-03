@@ -3,3 +3,5 @@
 
 
 Website bán quần áo được xây dựng bởi nhóm 7 để phục vụ cho đề tài môn Mongodb tại Trường DH Công nghiệp TPHCM
+---------------------------------------------------------------------------------------------------------------
+#Chức năng
