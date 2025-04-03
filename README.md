@@ -26,6 +26,7 @@ Website bán quần áo được xây dựng bởi nhóm 7 để phục vụ cho
     <br>
     * Bước 2: Cài đặt package: npm install
         <br>
-    * Bước 3: Chạy ở môi trường product: npm start
+    * Bước 3: Chạy backend: npm run dev
+
     
       
