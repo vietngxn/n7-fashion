@@ -1,0 +1,118 @@
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../font/DesignerVN-Poppins/DesignerVN-Poppins-ExtraBold.ttf);
+  }
+  :root {
+    --primary-color: #3e9a3a;
+    --text-dark: #000000;
+    --text-light: #737373;
+    --extra-light: #f4f6f6;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  .section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+    
+  }
+footer {
+    background-color: var(--text-dark);
+    height: 100%;
+    font-family: "Poppins-Bold", sans-serif;
+  }
+  
+  .footer__container {
+    display: grid;
+    gap: 4rem 2rem;
+    height: 350px;
+    padding-bottom: 100px;
+  }
+  
+  .footer__logo {
+    margin-bottom: 1rem;
+  }
+  
+  .footer__logo a {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--white);
+  }
+  
+  .footer__col p {
+    max-width: 300px;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+  }
+  
+  .footer__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer__socials a {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+  }
+  
+  .footer__socials a:hover {
+    color: var(--white);
+  }
+  
+  .footer__col h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+  
+  .footer__links {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .footer__links a {
+    color: var(--text-light);
+  }
+  
+  .footer__links a:hover {
+    color: var(--white);
+  }
+  
+  .footer__bar {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+  }
+  @media (width > 540px) {
+  
+    .footer__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (width > 768px) {
+    
+  
+    .footer__container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  
+    .footer__col:nth-child(1) {
+      grid-column: 1/3;
+    }
+  }
+  

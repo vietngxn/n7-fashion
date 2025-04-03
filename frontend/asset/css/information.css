@@ -3,8 +3,6 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
-
-/* Phần header */
 header{
     height: 100px;
 }
@@ -45,8 +43,6 @@ header input{
     border: 0;
     padding: 5px;
 }
-
-/* Ẩn menu toggle trên desktop */
 .menu-toggle {
     display: inline-block;
     display: none;
@@ -58,13 +54,11 @@ header input{
     top: 10px;
     z-index: 1001;
 }
-
-/* Menu mobile */
 .mobile-nav {
     position: fixed;
     display: none;
     top: 0;
-    left: -250px; /* Ẩn menu sang trái */
+    left: -250px; 
     width: 250px;
     height: 100vh;
     background: #fff;
@@ -76,7 +70,7 @@ header input{
 
 .mobile-nav ul {
     list-style: none;
-    padding: 60px 0 0; /* Tạo khoảng trống cho header */
+    padding: 60px 0 0; 
 }
 
 .mobile-nav li {
@@ -89,13 +83,9 @@ header input{
     color: #333;
     text-decoration: none;
 }
-
-/* Khi menu active */
 .mobile-nav.active {
     left: 0;
 }
-
-/* Overlay khi menu mở */
 .overlay {
     display: none;
     position: fixed;
@@ -106,8 +96,6 @@ header input{
     background: rgba(0,0,0,0.5);
     z-index: 999;
 }
-
-/* Menu desktop */
 .desktop-nav ul{
     text-align: center;
 }
@@ -127,8 +115,6 @@ header input{
 .desktop-nav ul li a:hover{
     color: #409F3A;
 }
-
-/* Phần form */
 .form-container h4{
     width: 70%;
     margin-top: 50px;
@@ -171,8 +157,6 @@ header input{
     background-color: #409F3A;
     color: #fff;
 }
-
-/* Phần footer */
 footer{
     height: 300px;
     background-color: #000;
@@ -223,11 +207,11 @@ footer table tr .mssv{
 
 @media (max-width: 1200px) {
     header .left, .right {
-        width: 25%; /* Điều chỉnh lại kích thước các phần header */
+        width: 25%; 
     }
     
     header .center {
-        width: 48%; /* Thu nhỏ ô tìm kiếm */
+        width: 48%; 
     }
 
     .form-container table{
@@ -258,29 +242,24 @@ footer table tr .mssv{
 }
 
 @media (max-width: 768px) {
-     /* Header layout */
      header {
-        height: 80px; /* Cố định chiều cao header */
+        height: 80px; 
         padding: 10px 0;
         position: relative;
     }
-
-    /* Khối right - chứa các nút */
     header .right {
         position: absolute;
         right: 10px;
         top: 0;
-        display: flex; /* Sử dụng flexbox */
-        align-items: center; /* Căn giữa theo chiều dọc */
+        display: flex; 
+        align-items: center; 
         padding-right: 0;
         gap: 10px;
-        width: auto; /* Chiều rộng tự động */
+        width: auto; 
     }
-
-    /* Các nút bên trong .right */
     header .right button,
     header .right .menu-toggle {
-        display: inline-flex; /* Hiển thị inline và căn giữa nội dung */
+        display: inline-flex; 
         align-items: center;
         justify-content: center;
         width: 40px;
@@ -290,16 +269,12 @@ footer table tr .mssv{
         border-radius: 50%;
         background: #f5f5f5;
     }
-
-    /* Nút menu toggle */
     .menu-toggle {
         display: inline-flex;
         font-size: 20px;
-        position: static; /* Bỏ position absolute */
+        position: static; 
         margin-left: 0;
     }
-
-    /* Logo */
     header .left {
         position: absolute;
         left: 10px;
@@ -310,8 +285,6 @@ footer table tr .mssv{
         height: 70px;
         width: auto;
     }
-
-    /* Thanh tìm kiếm */
     header .center {
         position: absolute;
         top: 70px;
@@ -320,13 +293,9 @@ footer table tr .mssv{
         padding: 0 10px;
         box-sizing: border-box;
     }
-
-    /* Ẩn menu desktop */
     nav.desktop-nav {
         display: none;
     }
-    
-    /* Hiển thị menu mobile */
     .mobile-nav {
         display: block;
     }
@@ -335,8 +304,6 @@ footer table tr .mssv{
         background-color: rgb(241, 238, 238);
         color: #409F3A;
     }
-
-    /* Menu điều hướng */
     nav ul li {
         padding: 0 10px;
     }

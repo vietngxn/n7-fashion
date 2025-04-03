@@ -3,90 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information</title>
+    <link rel="icon" type="image/x-icon" href="../asset/image/logo-team.png">
+    <title>Thông tin cá nhân</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="../asset/css/boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="../asset/css/information.css">
     <script src="../asset/js/boostrap/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../asset/icon/fontello-771d5d0f/css/fontello.css">
     <link rel="stylesheet" href="../asset/icon/fontello-35528ea5/css/fontello.css">
-
+    <link rel="stylesheet" href="../asset/css/main.css">
+    <script src="../asset/js/header.js"></script>
+    <script src="../asset/js/index.js"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="../asset/css/footer.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+           <div class="left">
+               <a href="./main.html"><img src="../asset/image/logo-team.png" alt=""></a>
+               
+           </div>
+           <nav class="desktop-nav">
+               <ul>
+                   <li><a href="./index.html">Giới thiệu</a></li>
+                   <li><a href="./main.html">Sản phẩm</a></li>
+                   <li><a href="./leaderboard.html">Bảng xếp hạng</a></li>
+                   <li><a href="./index.html">Tin tức</a></li>
+                   <li><a href="./index.html">Tuyển dụng</a></li>
+               </ul>
+           </nav>
+           <div class="right">
+               <button style="background-color: #000;"><a  id="infoBtn" href="./information.html"><i class="icon-user" style="color:#fff; size: 15px;"></i></a></button>
+               <button id="cartBtn"><a href="./giohang.html"><i class="icon-shopping-bag" style="color: #000;"></i></a></button>
+               <div class="menu-toggle">☰</div>
+           </div>
+       </header>
+       <nav class="mobile-nav">
+           <ul>
+               <li><a href="#">Giới thiệu</a></li>
+               <li><a href="./main.html">Sản phẩm</a></li>
+               <li><a href="#">Bảng xếp hạng</a></li>
+               <li><a href="#">Tin tức</a></li>
+               <li><a href="#">Tuyển dụng</a></li>
+               <li><a href="#">Hệ thống cửa hàng</a></li>
+           </ul>
+       </nav>
+   </div>
     <div class="containers">
-        <!-- Form -->
-    <div class="form-container">
-        <form action="">
-            <h4>Thông tin cá nhân</h4>
-
-            <table>
-                <tr>
-                    <td class="lab"><label for="">User Name</label></td>
-                    <td class="inp">
-                        <input type="text" placeholder="Username">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="lab"><label for="">Email</label></td>
-                    <td class="inp">
-                        <input type="text" placeholder="Email">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="lab"><label for="">Họ</label></td>
-                    <td class="inp">
-                        <input type="text" placeholder="Nguyen">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="lab"><label for="">Tên</label></td>
-                    <td class="inp">
-                        <input type="text" placeholder="Viet">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="lab"><label for="">Ngày sinh</label></td>
-                    <td class="inp">
-                        <input type="text" placeholder="DD/MM/YY">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="lab"><label for="">Địa chỉ</label></td>
-                    <td class="inp">
-                        <input type="text" placeholder="ABCXYZ">
-                    </td>
-                </tr>
-                <tr style="text-align: end;" class="w-100">
-                    <td colspan="2" class="w-50">
-                        <input class="btn w-50" type="button" value="Lưu"></input>
-                    </td>
-                </tr>
-            </table>
-        </form>
-
-
+        <div class="form-container" style="margin-bottom: 40px;">
+            <form id="updateForm">
+                <h4>Thông tin cá nhân</h4>
+        
+                <table>
+                    <tr>
+                        <td class="lab"><label for="username">User  Name</label></td>
+                        <td class="inp">
+                            <input type="text" id="username" placeholder="Username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lab"><label for="email">Email</label></td>
+                        <td class="inp">
+                            <input type="text" id="email" placeholder="Email" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lab"><label for="firstName">Họ</label></td>
+                        <td class="inp">
+                            <input type="text" id="firstName" placeholder="Nguyen">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lab"><label for="lastName">Tên</label></td>
+                        <td class="inp">
+                            <input type="text" id="lastName" placeholder="Viet">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lab"><label for="dob">Ngày sinh</label></td>
+                        <td class="inp">
+                            <input type="text" id="dob" placeholder="DD/MM/YY">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lab"><label for="address">Địa chỉ</label></td>
+                        <td class="inp">
+                            <input type="text" id="address" placeholder="ABCXYZ">
+                        </td>
+                    </tr>
+                    <tr style="text-align: end;" class="w-100">
+                        <td colspan="2" class="w-50">
+                            <input class="btn w-50" type="button" value="Lưu" onclick="updateCustomer()">
+                        </td>
+                        <td colspan="2" class="w-50">
+                          <input class="btn w-50" style="background-color: #787777;" type="button" value="Đăng xuất" onclick="logout()">
+                      </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <footer>
+          <div class="section__container footer__container">
+            <div class="footer__col">
+              <div class="footer__logo">
+                <a href="#">N7 FASHION</a>
+              </div>
+              <p>Trang web phục vụ cho đề tài của môn học CSDL NoSQL MongoDB - Trường Đại học Công nghiệp TPHCM</p>
+              <ul class="footer__socials">
+                <li>
+                  <a href="#"><i class="ri-facebook-fill"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-instagram-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-twitter-fill"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-linkedin-fill"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h4>Mã số sinh viên</h4>
+              <ul class="footer__links">
+                <li><a href="#">23687551</a></li>
+                <li><a href="#">23722181</a></li>
+                <li><a href="#">23666911</a></li>
+                <li><a href="#">22637261</a></li>
+                <li><a href="#">23696821</a></li>
+                <li><a href="#">23717161</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h4>Họ và tên</h4>
+              <ul class="footer__links">
+                <li><a href="#">Nguyễn Bá Việt</a></li>
+                <li><a href="#">Trần Thanh Toàn</a></li>
+                <li><a href="#">Cao Quốc Trung</a></li>
+                <li><a href="#">Trần Phương Trí</a></li>
+                <li><a href="#">Ừng Thị Thanh Trúc</a></li>
+                <li><a href="#">Đỗ Minh Tuấn</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h4>Chức năng</h4>
+              <ul class="footer__links">
+                <li><a href="#">Leader</a></li>
+                <li><a href="#">BE Dev</a></li>
+                <li><a href="#">BE Dev</a></li>
+                <li><a href="#">Giao diện + Collection</a></li>
+                <li><a href="#">Giao diện + Collection</a></li>
+                <li><a href="#">Giao diện + Collection</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bar">
+            Copyright © 2025. All rights reserved.
+          </div>
+        </footer>
     </div>
-            
-        <!-- Footer -->
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mobileNav = document.querySelector('.mobile-nav');
-            const overlay = document.createElement('div');
-            overlay.className = 'overlay';
-            document.body.appendChild(overlay);
-            
-            menuToggle.addEventListener('click', function() {
-                mobileNav.classList.toggle('active');
-                overlay.style.display = mobileNav.classList.contains('active') ? 'block' : 'none';
-            });
-            
-            overlay.addEventListener('click', function() {
-                mobileNav.classList.remove('active');
-                overlay.style.display = 'none';
-            });
-        });
-    </script>
+    <script src="../asset/js/infomation.js"></script>
 </body>
 </html>

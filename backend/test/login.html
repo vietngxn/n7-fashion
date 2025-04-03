@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login & Signup</title>
+    <style>
+        .product-list { margin-top: 20px; display: none; }
+        .product-item { border: 1px solid #ccc; padding: 10px; margin: 5px 0; }
+        #signup-section, #signin-section { margin: 20px; }
+        #user-info { margin: 20px; display: none; }
+    </style>
+</head>
+<body>
+    <!-- Form đăng ký -->
+    <div id="signup-section">
+        <h2>Đăng ký</h2>
+        <form id="signupForm">
+            <input type="text" id="signupUsername" placeholder="Tên đăng nhập" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng ký</button>
+        </form>
+    </div>
+
+    <!-- Form đăng nhập -->
+    <div id="signin-section">
+        <h2>Đăng nhập</h2>
+        <form id="signinForm">
+            <input type="email" id="signinEmail" placeholder="Email" required>
+            <input type="password" id="signinPassword" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng nhập</button>
+        </form>
+    </div>
+
+    <!-- Thông tin người dùng sau khi đăng nhập -->
+    <div id="user-info">
+        <h2>Chào mừng, <span id="usernameDisplay"></span>!</h2>
+        <button id="logoutBtn">Đăng xuất</button>
+    </div>
+
+    <!-- Danh sách sản phẩm -->
+    <div id="product-section" class="product-list">
+        <h2>Danh sách sản phẩm</h2>
+        <div id="product-list"></div>
+    </div>
+
+    <script>
+        const BASE_URL = 'http://localhost:3000';
+
+// Hàm đăng ký
+function handleSignup(event) {
+    event.preventDefault();
+    const customerUserName = document.getElementById('signupUsername').value.trim();
+    const email = document.getElementById('signupEmail').value.trim();
+    const customerPassword = document.getElementById('signupPassword').value;
+
+    fetch(`${BASE_URL}/customerSignUp`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ customerUserName, email, customerPassword }),
+    })
+    .then(response => {
+        if (!response.ok) return response.json().then(err => { throw new Error(err.message); });
+        return response.json();
+    })
+    .then(() => {
+        alert('Đăng ký thành công! Vui lòng đăng nhập.');
+        document.getElementById('signupForm').reset();
+    })
+    .catch(error => {
+        console.error('Lỗi đăng ký:', error);
+        alert(error.message); 
+    });
+}
+
+// Hàm đăng nhập
+function handleSignin(event) {
+    event.preventDefault();
+    const emailSignIn = document.getElementById('signinEmail').value;
+    const customerPassword = document.getElementById('signinPassword').value;
+
+    fetch(`${BASE_URL}/customerSignIn`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ emailSignIn, customerPassword }),
+    })
+    .then(response => {
+        if (!response.ok) return response.json().then(err => { throw new Error(err.message); });
+        return response.json();
+    })
+    .then(data => {
+        const customer = data.customer;
+        localStorage.setItem('customerId', customer._id);
+        localStorage.setItem('username', customer.customerUserName);
+        alert('Đăng nhập thành công!');
+
+    })
+    .catch(error => {
+        console.error('Lỗi đăng nhập:', error);
+        alert(error.message);
+    });
+}
+
+// Hàm hiển thị thông tin người dùng
+function showUserInfo(username) {
+    document.getElementById('signup-section').style.display = 'none';
+    document.getElementById('signin-section').style.display = 'none';
+    document.getElementById('user-info').style.display = 'block';
+    document.getElementById('product-section').style.display = 'block';
+    document.getElementById('usernameDisplay').textContent = username;
+}
+
+// Hàm đăng xuất
+function handleLogout() {
+    localStorage.removeItem('customerId');
+    localStorage.removeItem('username');
+    document.getElementById('signup-section').style.display = 'block';
+    document.getElementById('signin-section').style.display = 'block';
+    document.getElementById('user-info').style.display = 'none';
+    document.getElementById('product-section').style.display = 'none';
+    document.getElementById('product-list').innerHTML = '';
+}
+
+// Hàm lấy và hiển thị sản phẩm
+function fetchProducts() {
+    fetch(`${BASE_URL}/showAllProduct`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+    })
+    .then(response => {
+        if (!response.ok) return response.json().then(err => { throw new Error(err.message); });
+        return response.json();
+    })
+    .then(data => {
+        displayProducts(data.products);
+    })
+    .catch(error => {
+        console.error('Lỗi khi lấy sản phẩm:', error);
+        alert('Không thể tải danh sách sản phẩm: ' + error.message);
+    });
+}
+
+// Hàm hiển thị danh sách sản phẩm
+function displayProducts(products) {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = '';
+    if (!products || products.length === 0) {
+        productList.innerHTML = '<p>Không có sản phẩm nào.</p>';
+        return;
+    }
+    products.forEach(product => {
+        const productItem = document.createElement('div');
+        productItem.className = 'product-item';
+        productItem.innerHTML = `
+            <h3>${product.productName}</h3>
+            <p>Giá: ${product.price} VND</p>
+            <p>Số lượng: ${product.quantity}</p>
+            <p>ID: ${product.productId}</p>
+        `;
+        productList.appendChild(productItem);
+    });
+}
+
+// Kiểm tra trạng thái đăng nhập khi tải trang
+function checkLoginStatus() {
+    const customerId = localStorage.getItem('customerId');
+    const username = localStorage.getItem('username');
+    if (customerId && username) {
+        showUserInfo(username);
+        fetchProducts();
+    } else {
+        document.getElementById('product-section').style.display = 'none';
+    }
+}
+
+// Gắn sự kiện
+document.getElementById('signupForm').addEventListener('submit', handleSignup);
+document.getElementById('signinForm').addEventListener('submit', handleSignin);
+document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+
+// Kiểm tra trạng thái khi tải trang
+window.onload = checkLoginStatus;
+    </script>
+</body>
+</html>

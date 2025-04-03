@@ -4,47 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+    <link rel="icon" type="image/x-icon" href="../asset/image/logo-team.png">
+    <title>Giỏ hàng</title>
     <link rel="stylesheet" href="../asset/css/main.css">
     <link rel="stylesheet" href="../asset/css/giohang.css">
     <link rel="stylesheet" href="../asset/css/boostrap/bootstrap.min.css">
     <script src="../asset/js/boostrap/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../asset/icon/fontello-771d5d0f/css/fontello.css">
     <link rel="stylesheet" href="../asset/icon/fontello-35528ea5/css/fontello.css">
+    <link rel="stylesheet" href="../asset/css/footer.css">
+    <script src="../asset/js/header.js"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
     <div class="container">
-
-
+        <header>
+           <div class="left">
+               <a href="./main.html"><img src="../asset/image/logo-team.png" alt=""></a>
+               
+           </div>
+           <nav class="desktop-nav">
+               <ul>
+                   <li><a href="./index.html">Giới thiệu</a></li>
+                   <li><a href="./main.html">Sản phẩm</a></li>
+                   <li><a href="./leaderboard.html">Bảng xếp hạng</a></li>
+                   <li><a href="./index.html">Tin tức</a></li>
+                   <li><a href="./index.html">Tuyển dụng</a></li>
+               </ul>
+           </nav>
+           <div class="right">
+               <button style="background-color: #000;"><a href="./information.html"><i class="icon-user" style="color:#fff; size: 15px;"></i></a></button>
+               <button><a href="./giohang.html"><i class="icon-shopping-bag" style="color: #000;"></i></a></button>
+               <div class="menu-toggle">☰</div>
+           </div>
+       </header>
+       <nav class="mobile-nav">
+           <ul>
+               <li><a href="#">Giới thiệu</a></li>
+               <li><a href="./main.html">Sản phẩm</a></li>
+               <li><a href="#">Bảng xếp hạng</a></li>
+               <li><a href="#">Tin tức</a></li>
+               <li><a href="#">Tuyển dụng</a></li>
+               <li><a href="#">Hệ thống cửa hàng</a></li>
+           </ul>
+       </nav>
+   </div>
+   </div>
+    <div class="containerss" style="margin-top: 40px;">
         <h3>Giỏ hàng</h3>
-
-        <div class="cart-item">
-            <img src="../asset/image/arrival-1.jpg" alt="Sản phẩm">
-            <div class="cart-info">
-                <p>Áo polo nam POHTK401</p>
-                <div class="info">Size: M | Màu: Trắng</div>
-            </div>
-            <div class="cart-actions">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-            </div>
-            <div class="cart-price">490.000đ</div>
+        <div id="cart-list">
         </div>
-
-        <div class="cart-total">
-            Tổng cộng: 32.400.000đ
+        <div class="cart-total" id="cart-total">
+            Tổng cộng: 0đ
         </div>
-
         <div class="text-end mt-3">
             <button class="confirm-btn">Xác nhận</button>
         </div>
     </div>
 
-    <script>
-
-    </script>
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#">N7 FASHION</a>
+          </div>
+          <p>Trang web phục vụ cho đề tài của môn học CSDL NoSQL MongoDB - Trường Đại học Công nghiệp TPHCM</p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Mã số sinh viên</h4>
+          <ul class="footer__links">
+            <li><a href="#">23687551</a></li>
+            <li><a href="#">23722181</a></li>
+            <li><a href="#">23666911</a></li>
+            <li><a href="#">22637261</a></li>
+            <li><a href="#">23696821</a></li>
+            <li><a href="#">23717161</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Họ và tên</h4>
+          <ul class="footer__links">
+            <li><a href="#">Nguyễn Bá Việt</a></li>
+            <li><a href="#">Trần Thanh Toàn</a></li>
+            <li><a href="#">Cao Quốc Trung</a></li>
+            <li><a href="#">Trần Phương Trí</a></li>
+            <li><a href="#">Ừng Thị Thanh Trúc</a></li>
+            <li><a href="#">Đỗ Minh Tuấn</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Chức năng</h4>
+          <ul class="footer__links">
+            <li><a href="#">Leader</a></li>
+            <li><a href="#">BE Dev</a></li>
+            <li><a href="#">BE Dev</a></li>
+            <li><a href="#">Giao diện + Collection</a></li>
+            <li><a href="#">Giao diện + Collection</a></li>
+            <li><a href="#">Giao diện + Collection</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025. All rights reserved.
+      </div>
+    </footer>
+    <script src="../asset/js/gioHang.js"></script>
 </body>
 
 </html>

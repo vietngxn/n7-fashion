@@ -5,21 +5,39 @@
     font-family: 'Arial', sans-serif;
 }
 
-body {
+@font-face {
+    font-family: "Poppins";
+    src: url(../font/DesignerVN-Poppins/DesignerVN-Poppins-ExtraBold.ttf);
+}
 
-    justify-content: center;
-    align-items: center;
+body {
     height: 100vh;
     background-color: #f5f5f5;
 }
-
+.go-home{
+    transform: translate(0px,-50px);
+}
+.go-home a{
+    text-decoration: none;
+    color: #28a745;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: color 0.3s ease;
+}
+.go-home a:hover {
+    color: #218838;
+}
 .login-container {
     display: flex;
     min-height: 700px;
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
 }
 
 .login-form {
@@ -33,20 +51,45 @@ body {
 h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    text-align: center;
+    animation: slideDown 0.5s ease-out;
 }
 
 label {
     font-weight: bold;
     margin-top: 10px;
+    color: #555;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 2px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+    outline: none;
+    transform: scale(1.02);
+}
+
+input::placeholder {
+    color: #aaa;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::placeholder {
+    opacity: 1;
 }
 
 .remember-forgot {
@@ -60,52 +103,82 @@ input {
     display: flex;
     align-items: center;
     gap: 5px;
-    /* Tạo khoảng cách giữa checkbox và chữ */
     cursor: pointer;
+    color: #666;
 }
 
 .remember-forgot a {
     text-decoration: none;
-    color: green;
+    color: #28a745;
+    transition: color 0.3s ease;
+}
+
+.remember-forgot a:hover {
+    color: #218838;
 }
 
 .btn {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
 }
 
 .primary-btn {
-    background-color: green;
+    background-color: #28a745;
     color: white;
+}
+
+.primary-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
 }
 
 .google-btn {
     background-color: white;
-    color: black;
-    border: 1px solid #ddd;
+    color: #333;
+    border: 2px solid #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .google-btn i {
     margin-right: 10px;
     font-size: 18px;
+    color: #db4437;
+}
+
+.google-btn:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: #db4437;
 }
 
 .signup-text {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    color: #666;
 }
 
 .signup-text a {
-    color: green;
+    color: #28a745;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup-text a:hover {
+    color: #218838;
 }
 
 .login-image {
@@ -119,4 +192,19 @@ input {
 .login-image img {
     width: 65%;
     height: auto;
+    animation: bounce 2s infinite ease-in-out;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
