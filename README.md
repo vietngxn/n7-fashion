@@ -17,16 +17,5 @@ Website bán quần áo được xây dựng bởi nhóm 7 để phục vụ cho
   + Backend: Nodejs;
   + Database: Mongodb
 
-# Cách thức khởi chạy ứng dụng
-  +Yêu cầu: Cài đặt nodejs version mới nhất 
-  <br>
-  +Cách thức:
-  <br>
-    * Bước 1: Clone Repository, cd Folder backend
-    <br>
-    * Bước 2: Cài đặt package: npm install
-        <br>
-    * Bước 3: Chạy backend: npm run dev
 
-    
       
